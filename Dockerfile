@@ -1,17 +1,5 @@
-# For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3-slim
+FROM mysql:latest
 
-# Keeps Python from generating .pyc files in the container
-ENV PYTHONDONTWRITEBYTECODE=1
+ENV MYSQL_ROOT_PASSWORD=root
 
-# Turns off buffering for easier container logging
-ENV PYTHONUNBUFFERED=1
-
-
-WORKDIR .
-COPY hello.py .
-
-
-
-# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-CMD ["python", "hello.py"]
+COPY ./database.sql /docker-entrypoint-initdb.d/
