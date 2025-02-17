@@ -1,4 +1,3 @@
-```markdown
 # MySQL + Docker: Containerized Database Solution
 
 This repository offers a **fully containerized MySQL database** setup using **Docker**, making it easier to deploy, manage, and scale your database environment. Whether you're a developer, a database administrator, or just starting to learn Docker, this guide covers everything you need. 
